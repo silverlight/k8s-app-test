@@ -1,0 +1,65 @@
+server:
+ port: 8002
+
+spring:
+  application:
+    name: k8s-gateway
+  cloud:
+    gateway: #网关路由配置
+      routes:
+        #将 micro-service-cloud-provider-dept-8001 提供的服务隐藏起来，不暴露给客户端，只给客户端暴露 API 网关的地址 9527
+        - id: remote-a   #路由 id,没有固定规则，但唯一，建议与服务名对应
+          uri: http://localhost:18080  #匹配后提供服务的路由地址
+          predicates:
+            #以下是断言条件，必选全部符合条件
+            - Path=/remote-a/**
+            #- Method=*
+
+        - id: remote-b
+          uri: http://localhost:18081
+          predicates:
+            #以下是断言条件，必选全部符合条件
+            - Path=/remote-b/**
+            #- Method=*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
