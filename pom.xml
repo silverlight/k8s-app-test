@@ -8,11 +8,13 @@
         <version>2.7.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.example</groupId>
     <artifactId>k8s-app-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>k8s-app-test</name>
     <description>k8s-app-test</description>
+    <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
