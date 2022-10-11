@@ -16,6 +16,13 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <modules>
+        <module>gateway</module>
+        <module>remote-call-a</module>
+        <module>remote-call-b</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
